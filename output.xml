@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220720 12:14:45.768" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCase 02" source="C:\test\TestCase_02.robot">
+<test id="s1-t1" name="TestCase_02" line="22">
+<kw name="TestCase_01">
+<kw name="TestCase_01.OpenGoogle">
+<msg timestamp="20220720 12:14:47.198" level="FAIL">No keyword with name 'TestCase_01.OpenGoogle' found. Did you try using keyword 'TestCase 01' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" starttime="20220720 12:14:47.198" endtime="20220720 12:14:47.198"/>
+</kw>
+<kw name="TestCase_01.Press Buttom Search">
+<status status="NOT RUN" starttime="20220720 12:14:47.205" endtime="20220720 12:14:47.205"/>
+</kw>
+<kw name="TestCase_01.Search google">
+<status status="NOT RUN" starttime="20220720 12:14:47.211" endtime="20220720 12:14:47.211"/>
+</kw>
+<kw name="TestCase_01.Verify Link">
+<status status="NOT RUN" starttime="20220720 12:14:47.217" endtime="20220720 12:14:47.218"/>
+</kw>
+<status status="FAIL" starttime="20220720 12:14:47.192" endtime="20220720 12:14:47.218"/>
+</kw>
+<kw name="Clear">
+<status status="NOT RUN" starttime="20220720 12:14:47.219" endtime="20220720 12:14:47.219"/>
+</kw>
+<kw name="InputSearch">
+<status status="NOT RUN" starttime="20220720 12:14:47.219" endtime="20220720 12:14:47.219"/>
+</kw>
+<kw name="Press ButtomSearch">
+<status status="NOT RUN" starttime="20220720 12:14:47.220" endtime="20220720 12:14:47.220"/>
+</kw>
+<kw name="Verify Link_02">
+<status status="NOT RUN" starttime="20220720 12:14:47.220" endtime="20220720 12:14:47.220"/>
+</kw>
+<status status="FAIL" starttime="20220720 12:14:47.188" endtime="20220720 12:14:47.221">No keyword with name 'TestCase_01.OpenGoogle' found. Did you try using keyword 'TestCase 01' and forgot to use enough whitespace between keyword and arguments?</status>
+</test>
+<status status="FAIL" starttime="20220720 12:14:45.774" endtime="20220720 12:14:47.226"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCase 02">TestCase 02</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220720 12:14:46.100" level="ERROR">Error in file 'C:\test\TestCase_02.robot' on line 3: Replacing variables from setting 'Resource' failed: Variable '${RESOURCES}' not found.</msg>
+</errors>
+</robot>
