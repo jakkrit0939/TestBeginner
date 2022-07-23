@@ -1,50 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220720 12:14:45.768" rpa="false" schemaversion="3">
-<suite id="s1" name="TestCase 02" source="C:\test\TestCase_02.robot">
-<test id="s1-t1" name="TestCase_02" line="22">
-<kw name="TestCase_01">
-<kw name="TestCase_01.OpenGoogle">
-<msg timestamp="20220720 12:14:47.198" level="FAIL">No keyword with name 'TestCase_01.OpenGoogle' found. Did you try using keyword 'TestCase 01' and forgot to use enough whitespace between keyword and arguments?</msg>
-<status status="FAIL" starttime="20220720 12:14:47.198" endtime="20220720 12:14:47.198"/>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220723 13:16:03.528" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCase04" source="C:\test\Testbeginning\TestCase04.robot">
+<test id="s1-t1" name="TestCase_04_Open and search something in Google then click 3rd link and verify" line="7">
+<kw name="OpenGoogle" library="resource">
+<kw name="New Browser" library="Browser">
+<arg>${Browser}</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20220723 13:16:04.919" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "C:\\test\\browser\\traces\\8df1671e-1000-4db5-bd3a-2e2b98b65052"}</msg>
+<msg timestamp="20220723 13:16:05.805" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"C:\\test\\browser\\traces\\8df1671e-1000-4db5-bd3a-2e2b98b65052"}</msg>
+<status status="PASS" starttime="20220723 13:16:04.918" endtime="20220723 13:16:05.805"/>
 </kw>
-<kw name="TestCase_01.Press Buttom Search">
-<status status="NOT RUN" starttime="20220720 12:14:47.205" endtime="20220720 12:14:47.205"/>
+<kw name="New Page" library="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20220723 13:16:07.952" level="INFO">Successfully initialized new page object and opened url: https://www.google.com/</msg>
+<msg timestamp="20220723 13:16:07.952" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20220723 13:16:05.806" endtime="20220723 13:16:07.952"/>
 </kw>
-<kw name="TestCase_01.Search google">
-<status status="NOT RUN" starttime="20220720 12:14:47.211" endtime="20220720 12:14:47.211"/>
+<status status="PASS" starttime="20220723 13:16:04.917" endtime="20220723 13:16:07.952"/>
 </kw>
-<kw name="TestCase_01.Verify Link">
-<status status="NOT RUN" starttime="20220720 12:14:47.217" endtime="20220720 12:14:47.218"/>
+<kw name="Set Browser Timeout" library="Browser">
+<arg>30 second</arg>
+<tag>Config</tag>
+<tag>Setter</tag>
+<doc>Sets the timeout used by most input and getter keywords.</doc>
+<msg timestamp="20220723 13:16:07.958" level="INFO">Set timeout to: 30000</msg>
+<status status="PASS" starttime="20220723 13:16:07.953" endtime="20220723 13:16:07.958"/>
 </kw>
-<status status="FAIL" starttime="20220720 12:14:47.192" endtime="20220720 12:14:47.218"/>
+<kw name="Search google1" library="resource">
+<kw name="Click" library="Browser">
+<arg>${Search}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220723 13:16:07.959" endtime="20220723 13:16:08.129"/>
 </kw>
-<kw name="Clear">
-<status status="NOT RUN" starttime="20220720 12:14:47.219" endtime="20220720 12:14:47.219"/>
+<kw name="Fill Text" library="Browser">
+<arg>${Search}</arg>
+<arg>${Expect_Search1}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220723 13:16:08.150" level="INFO">Fills the text 'Genshin Impact' in the given field.</msg>
+<status status="PASS" starttime="20220723 13:16:08.129" endtime="20220723 13:16:08.197"/>
 </kw>
-<kw name="InputSearch">
-<status status="NOT RUN" starttime="20220720 12:14:47.219" endtime="20220720 12:14:47.219"/>
+<status status="PASS" starttime="20220723 13:16:07.959" endtime="20220723 13:16:08.197"/>
 </kw>
-<kw name="Press ButtomSearch">
-<status status="NOT RUN" starttime="20220720 12:14:47.220" endtime="20220720 12:14:47.220"/>
+<kw name="Press Buttom Search" library="resource">
+<kw name="Keyboard Key" library="Browser">
+<arg>press</arg>
+<arg>Enter</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
+<status status="PASS" starttime="20220723 13:16:08.199" endtime="20220723 13:16:08.222"/>
 </kw>
-<kw name="Verify Link_02">
-<status status="NOT RUN" starttime="20220720 12:14:47.220" endtime="20220720 12:14:47.220"/>
+<status status="PASS" starttime="20220723 13:16:08.198" endtime="20220723 13:16:08.222"/>
 </kw>
-<status status="FAIL" starttime="20220720 12:14:47.188" endtime="20220720 12:14:47.221">No keyword with name 'TestCase_01.OpenGoogle' found. Did you try using keyword 'TestCase 01' and forgot to use enough whitespace between keyword and arguments?</status>
+<kw name="Verify Search1" library="resource">
+<kw name="Get Text" library="Browser">
+<var>${Result_Search1}</var>
+<arg>//*[@id="rso"]/div[1]//div[1]/span/em</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220723 13:16:09.416" level="INFO">${Result_Search1} = Genshin Impact</msg>
+<status status="PASS" starttime="20220723 13:16:08.223" endtime="20220723 13:16:09.416"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Result_Search1}</arg>
+<arg>${Expect_Search1}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220723 13:16:09.417" endtime="20220723 13:16:09.417"/>
+</kw>
+<kw name="Get Text" library="Browser">
+<var>${Result1}</var>
+<arg>//*[@id="rso"]/div[1]//div[1]/a/div/cite</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220723 13:16:09.447" level="INFO">${Result1} = https://genshin.hoyoverse.com</msg>
+<status status="PASS" starttime="20220723 13:16:09.417" endtime="20220723 13:16:09.448"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${Result1}</arg>
+<arg>${Expect_Url1}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220723 13:16:09.448" endtime="20220723 13:16:09.449"/>
+</kw>
+<status status="PASS" starttime="20220723 13:16:08.222" endtime="20220723 13:16:09.449"/>
+</kw>
+<kw name="Click Link3" library="resource">
+<kw name="Get Text" library="Browser">
+<var>${Result_Link3}</var>
+<arg>//*[@id="rso"]/div[5]/div/div[1]/div/a/div/cite</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20220723 13:16:09.484" level="INFO">${Result_Link3} = https://play.google.com › store › apps › details › id=com....</msg>
+<status status="PASS" starttime="20220723 13:16:09.451" endtime="20220723 13:16:09.484"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>${Link3}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220723 13:16:09.485" endtime="20220723 13:16:09.709"/>
+</kw>
+<kw name="Set Test Variable" library="BuiltIn">
+<arg>${URL_Link3}</arg>
+<arg>${Result_Link3}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<msg timestamp="20220723 13:16:09.712" level="INFO">${URL_Link3} = https://play.google.com › store › apps › details › id=com....</msg>
+<status status="PASS" starttime="20220723 13:16:09.709" endtime="20220723 13:16:09.713"/>
+</kw>
+<status status="PASS" starttime="20220723 13:16:09.450" endtime="20220723 13:16:09.713"/>
+</kw>
+<kw name="Verify Link3" library="resource">
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${URL_Link3}</arg>
+<arg>${URL_03}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220723 13:16:09.791" endtime="20220723 13:16:09.792"/>
+</kw>
+<status status="PASS" starttime="20220723 13:16:09.790" endtime="20220723 13:16:09.792"/>
+</kw>
+<status status="PASS" starttime="20220723 13:16:04.911" endtime="20220723 13:16:09.846"/>
 </test>
-<status status="FAIL" starttime="20220720 12:14:45.774" endtime="20220720 12:14:47.226"/>
+<status status="PASS" starttime="20220723 13:16:03.531" endtime="20220723 13:16:10.570"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="TestCase 02">TestCase 02</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="TestCase04">TestCase04</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220720 12:14:46.100" level="ERROR">Error in file 'C:\test\TestCase_02.robot' on line 3: Replacing variables from setting 'Resource' failed: Variable '${RESOURCES}' not found.</msg>
 </errors>
 </robot>
